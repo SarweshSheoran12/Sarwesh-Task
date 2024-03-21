@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div id="form-container">
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <div id="questions">
+            <div class="question">
+                <label for="select1">Select 1:</label>
+                <select id="select1" onchange="updateProgressBar()">
+                    <option value="">Select option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="input1">Input 1:</label>
+                <input type="text" id="input1" oninput="updateProgressBar()" style="border-radius: 15px;">
+            </div>
+            <div class="question">
+                <label for="input2">Input 2:</label>
+                <input type="text" id="input2" oninput="updateProgressBar() " style="border-radius: 15px;" >
+            </div>
+            <div class="question">
+                <label for="select2">Select 2:</label>
+                <select id="select2" onchange="updateProgressBar()">
+                    <option value="">Select option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>Radio Buttons1:</label><br>
+                <input type="radio" name="radio" id="radio1"  onchange="updateProgressBar()"> Option 1
+                <input type="radio" name="radio" id="radio2" onchange="updateProgressBar()"> Option 2
+            </div>
+            <div class="question">
+                <label>Radio Buttons 2:</label><br>
+                <input type="radio" name="radioPending" id="radioPending1" onchange="updateProgressBar()"> Option 1 (Pending)
+                <input type="radio" name="radioPending" id="radioPending2" onchange="updateProgressBar()"> Option 2 (Pending)
+            </div>
+        </div>
+        <button id="refresh-button" onclick="window.location.reload();">Back</button>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
